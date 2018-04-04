@@ -1,6 +1,7 @@
 import React from 'react'
 import './Nav.css'
 import logo from '../../hollister_Logo.png'
+import background from '../../site_background.jpg'
 
 export default function() {
    return (
