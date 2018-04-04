@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Nav from '../../components/Nav/Nav'
 
 export default class Cart extends Component {
    
