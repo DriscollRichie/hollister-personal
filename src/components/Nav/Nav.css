@@ -1,61 +1,72 @@
 @import url('https://fonts.googleapis.com/css?family=Pathway+Gothic+One');
-body{
-   background-image: url('../../site_background.jpg');
+/* body{
+   background-image: url('../../assets/site_background.jpg');
    width: 100vw;
    height: 100vh; 
    background-size: 100% 100%;
-}
+} */
 .nav {
    height: 100px;
    width: 100%;
    background-color: #494d59;
    font-family: 'Pathway Gothic One', sans-serif;
-   font-size: 1in;
+   font-size: 20px;
    color: white;
    display: flex;
+   justify-content: space-between;
    overflow: auto;
-   position: static;
+   box-sizing: border-box;
+   padding: 0px 50px;
 }
 
-.title {
+.Nav-link {
+   text-decoration: none;
+   color: white;
+}
+
+.nav-bar-left {
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+   margin-left: 20px;
+   font-size: 35px;
+}
+
+.ul-links {
    display: flex;
 }
 
-.title_text {
-   position: fixed;
-   left: 38%
+.ul-links li {
+   margin-right: 50px;
 }
 
-.headCat {
-   font-size: 1cm;
+.nav-bar-mid {
    display: flex;
-   list-style: none;
+   justify-content: flex-start;
    align-items: center;
 }
 
-.headGirl {
-   margin-left: 1in;
-}
-
-.app_logo {
-   height: 2cm;
-   position: relative;
-   left: 2.3cm;
-   top: 10%;
-}
-
-.account_actions {
-   position: relative;
-   font-size: 1cm;
+.title {
+   color: white;
    display: flex;
-   list-style: none;
-   left: 5in;
-   
+   align-items: center;
+   justify-content: flex-start;
 }
 
-.cart {
+.title span {
    position: relative;
-   left: 2cm;
+   top: 5px;
+   font-size: 60px
 }
 
+.nav-bar-right {
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   margin-right: 20px;
+   font-size: 35px;
+}
 
+#most-right-link {
+   margin-right: 0;
+}

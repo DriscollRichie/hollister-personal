@@ -1,12 +1,11 @@
 import React, { Component } from 'react'
-import Nav from '../../components/Nav/Nav'
+import './Cart.css'
 
 export default class Cart extends Component {
-   
    render() {
       return(
-         <div>
-            <h3> Cart </h3>
+         <div id="Cart-container">
+            <h1>I am Cart</h1>
          </div>
       )
    }

@@ -1,24 +1,41 @@
 import React from 'react'
 import './Nav.css'
-import logo from '../../hollister_Logo.png'
-import background from '../../site_background.jpg'
+import logo from '../../assets/hollister_Logo.png'
+import background from '../../assets/site_background.jpg'
+import routes from '../../routes'
+import { Link, Route } from 'react-router-dom'
+import Cart from '../Cart/Cart'
 
 export default function() {
    return (
       <div>
          <nav className='nav'>
-            <ul className='headCat'>
-               <li>Guys</li>
-               <li className='headGirl'>Girls</li>
-            </ul>
-            <div className='title'>
-               <span className="title_text">Hollister</span>
-               <img src={logo} className='app_logo' alt="logo"/>           
+            <div className="nav-bar-left">
+               <ul className="ul-links">
+                  <li>Guys</li>
+                  <li>Girls</li>
+               </ul>
             </div>
-            <ul className='account_actions'>
-               <li>Account</li>
-               <li className='cart'>Cart</li>
-            </ul>
+
+            <div class="nav-bar-mid">
+               <Link to="/" className="Nav-link">
+                  <div className='title'>
+                     <img src={logo} className='app_logo' alt="logo" width="150px"/>           
+                     <span>Hollister</span>
+                  </div>
+               </Link>
+            </div>
+
+            <div class="nav-bar-right">
+               <ul className='ul-links'>
+                  <li>Account</li>
+                  <Link to='/cart' className="Nav-link" >
+                     <li id='most-right-link'>Cart</li>
+                  </Link>
+               </ul>
+            </div>
+
+
          </nav>
       </div>
    )
