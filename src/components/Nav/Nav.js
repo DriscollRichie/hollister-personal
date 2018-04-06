@@ -1,10 +1,7 @@
 import React from 'react'
 import './Nav.css'
 import logo from '../../assets/hollister_Logo.png'
-import background from '../../assets/site_background.jpg'
-import routes from '../../routes'
-import { Link, Route } from 'react-router-dom'
-import Cart from '../Cart/Cart'
+import { Link } from 'react-router-dom'
 
 export default function() {
    return (
@@ -17,7 +14,7 @@ export default function() {
                </ul>
             </div>
 
-            <div class="nav-bar-mid">
+            <div className="nav-bar-mid">
                <Link to="/" className="Nav-link">
                   <div className='title'>
                      <img src={logo} className='app_logo' alt="logo" width="150px"/>           
@@ -26,9 +23,11 @@ export default function() {
                </Link>
             </div>
 
-            <div class="nav-bar-right">
+            <div className="nav-bar-right">
                <ul className='ul-links'>
-                  <li>Account</li>
+                  <Link to='/account'>
+                     <li>Account</li>
+                  </Link>
                   <Link to='/cart' className="Nav-link" >
                      <li id='most-right-link'>Cart</li>
                   </Link>

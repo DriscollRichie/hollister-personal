@@ -17,6 +17,7 @@
    overflow: auto;
    box-sizing: border-box;
    padding: 0px 50px;
+   text-decoration: none;
 }
 
 .Nav-link {
@@ -34,10 +35,13 @@
 
 .ul-links {
    display: flex;
+   text-decoration: none;
 }
 
 .ul-links li {
    margin-right: 50px;
+   color: white;
+   text-decoration: none;
 }
 
 .nav-bar-mid {
@@ -65,8 +69,13 @@
    align-items: center;
    margin-right: 20px;
    font-size: 35px;
+   color: white;
+   text-decoration: none;
 }
 
 #most-right-link {
    margin-right: 0;
+}
+a { 
+   text-decoration: none;
 }
