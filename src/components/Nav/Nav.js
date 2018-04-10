@@ -9,8 +9,12 @@ export default function() {
          <nav className='nav'>
             <div className="nav-bar-left">
                <ul className="ul-links">
-                  <li>Guys</li>
-                  <li>Girls</li>
+                  <Link to='/products/male'>
+                     <li>Guys</li>
+                  </Link>
+                  <Link to='/products/female'>
+                     <li>Girls</li>
+                  </Link>
                </ul>
             </div>
 
@@ -25,9 +29,9 @@ export default function() {
 
             <div className="nav-bar-right">
                <ul className='ul-links'>
-                  <Link to='/account'>
-                     <li>Account</li>
-                  </Link>
+               <a href={process.env.REACT_APP_LOGIN}>
+                     <li>Login</li>
+               </a>
                   <Link to='/cart' className="Nav-link" >
                      <li id='most-right-link'>Cart</li>
                   </Link>

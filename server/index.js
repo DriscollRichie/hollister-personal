@@ -5,6 +5,7 @@ const bodyParser = require('body-parser')
 const passport = require('passport')
 const Auth0Strategy = require('passport-auth0')
 const massive = require('massive')
+const controller = require('./controller')
 
 const {
    SERVER_PORT,
@@ -63,7 +64,10 @@ passport.serializeUser( (id, done) => {
 passport.deserializeUser( (id, done) => {
    //puts info on req.user
    app.get('db').find_session_user([id]).then( loggedInUser => {
-      done(null, loggedInUser[0])})})
+      done(null, loggedInUser[0])
+   })
+}
+)
 
 
       app.get('/auth', passport.authenticate('auth0'))
@@ -82,9 +86,11 @@ passport.deserializeUser( (id, done) => {
       app.get('/auth/logout', (req, res) => {
           req.logout();
           res.redirect('http://localhost:3000');
-      })
-   
+      }
+)
+   // *-----------------------------------------------------------------------------------------* \\   
 
+app.get('/api/products/:gender', controller.getProducts)
 
 
 app.listen( SERVER_PORT, () => console.log( `Magic happens on port: ${SERVER_PORT}`))
